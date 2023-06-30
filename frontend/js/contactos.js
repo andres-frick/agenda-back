@@ -3,14 +3,14 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-        url:"http://127.0.0.1:5000/productos",
+        url:"https://andresfrick.pythonanywhere.com/contactos",//host creado en pythonanywhere para el back
         productos:[],
         error:false,
         cargando:true
       }
     },
-    // Se llama después de que la instancia haya 
-    // terminado de procesar todas las opciones relacionadas con el estado.
+
+
     created() {
         this.fetchData(this.url)
     },
@@ -19,7 +19,7 @@ const { createApp } = Vue
             fetch(url)
                 .then(response => response.json())
                 .then(data => {
-                    this.productos = data;
+                    this.Contactos = data;
                     this.cargando=false
                 })
                 .catch(err => {
@@ -27,13 +27,13 @@ const { createApp } = Vue
                     this.error=true              
                 })
         },
-        eliminar(producto) {
-            const url = 'http://localhost:5000/productos/' + producto;
+        eliminar(Contacto) {
+            const url = 'https://andresfrick.pythonanywhere.com/contactos' + Contacto;
             var options = {
                 method: 'DELETE',
             }
             fetch(url, options)
-                .then(res => res.text()) // or res.json()
+                .then(res => res.text()) 
                 .then(res => {
                     location.reload();
                 })
