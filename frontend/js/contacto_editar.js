@@ -33,7 +33,7 @@ function modificar() {
         direccion: s,
         mail:i
     }
-    let url = "http://localhost:5000/productos/"+id
+    let url = "https://andresfrick.pythonanywhere.com/contactos"+id
     var options = {
         body: JSON.stringify(Contacto),
         method: 'PUT',
