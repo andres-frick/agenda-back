@@ -2,10 +2,11 @@
 <html lang="en">
 
 <head>
-    <title>Title</title>
+    <title>Agenda</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="img/cuaderno.ico" type="image/x-icon">
 
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -20,17 +21,17 @@
     <main>
         <div id="app" class="container">
             <br>
-            <h1>Productos</h1>
+            <h1>Contactos</h1>
             
             <a class="btn btn-primary" href="producto_nuevo.html">Nuevo</a>
 
-            <section v-if="error">Lo sentimos se produjo un error</section>
+            <!-- <section v-if="error">Lo sentimos se produjo un error</section> -->
             <section v-else>
-                <section v-if="cargando">
-                    <div class="spinner-border"></div>
+                <!-- <section v-if="cargando">
+                    <div class="spinner-grow"></div>
                     <p>Cargando .....</p>
 
-                </section>
+                </section> -->
                 <section v-else>
                     
                     <div class="table-responsive">
@@ -39,27 +40,27 @@
                                 <tr>
                                     <th scope="col">Id</th>
                                     <th scope="col">Nombre</th>
-                                    <th scope="col">Precio</th>
-                                    <th scope="col">Stock</th>
-                                    <th scope="col">Imagen</th>
+                                    <th scope="col">Dirección</th>
+                                    <th scope="col">Teléfono</th>
+                                    <th scope="col">Mail</th>
                                     <th scope="col">Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr v-for="producto in productos" class="">
-                                    <td scope="row">{{producto.id}}</td>
-                                    <td>{{producto.nombre}}</td>
-                                    <td>{{producto.precio}}</td>
-                                    <td>{{producto.stock}}</td>
+                                <tr v-for="contacto in contactos" class="">
+                                    <td scope="row">{{contacto.id}}</td>
+                                    <td>{{contacto.nombre}}</td>
+                                    <td>{{contacto.direccion}}</td>
+                                    <td>{{contacto.telefono}}</td>
                                     <td>
-                                        <img width="60" :src="producto.imagen" :alt="producto.nombre">
+                                        <img width="60" :src="contacto.mail" :alt="contacto.nombre">
 
 
                                     </td>
                                     <td>
-                                        <button type="button" class="btn btn-danger" v-on:click="eliminar(producto.id)"    >Eliminar</button>
+                                        <button type="button" class="btn btn-danger" v-on:click="eliminar(contacto.id)"    >Eliminar</button>
                                         
-                                        <a class="btn btn-primary" :href="'producto_editar.html?id='+ producto.id+'&nombre=' +producto.nombre+ '&precio='+producto.precio+'&stock='+producto.stock +  '&imagen='+producto.imagen" >Editar</a>
+                                        <a class="btn btn-primary" :href="'producto_editar.html?id='+ contacto.id+'&nombre=' +contacto.nombre+ '&direccion='+contacto.direccion+'&telefono='+contacto.telefono +  '&mail='+contacto.mail" >Editar</a>
                                     </td>
                                 </tr>
                             </tbody>
