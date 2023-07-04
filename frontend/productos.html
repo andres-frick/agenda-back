@@ -13,7 +13,7 @@
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
 </head>
-
+<!-- TODO: Cambiar nombre archivo productos.html por contactos.html -->
 <body>
     <header id="header">
         <!-- place navbar here -->
@@ -22,18 +22,19 @@
         <div id="app" class="container">
             <br>
             <h1>Contactos</h1>
-            
-            <a class="btn btn-primary" href="producto_nuevo.html">Nuevo</a>
 
-            <!-- <section v-if="error">Lo sentimos se produjo un error</section> -->
+            <a class="btn btn-primary" href="producto_nuevo.html">Nuevo</a>
+            
+            <section v-if="error">Lo sentimos se produjo un error</section>
+            
             <section v-else>
-                <!-- <section v-if="cargando">
+                <section v-if="cargando">
                     <div class="spinner-grow"></div>
                     <p>Cargando .....</p>
 
-                </section> -->
+            </section>
                 <section v-else>
-                    
+
                     <div class="table-responsive">
                         <table class="table table-bordered">
                             <thead>
@@ -52,15 +53,13 @@
                                     <td>{{contacto.nombre}}</td>
                                     <td>{{contacto.direccion}}</td>
                                     <td>{{contacto.telefono}}</td>
+                                    <td>{{contacto.email}}</td>
                                     <td>
-                                        <img width="60" :src="contacto.mail" :alt="contacto.nombre">
+                                        <button type="button" class="btn btn-danger"
+                                            v-on:click="eliminar(contacto.id)">Eliminar</button>
 
-
-                                    </td>
-                                    <td>
-                                        <button type="button" class="btn btn-danger" v-on:click="eliminar(contacto.id)"    >Eliminar</button>
-                                        
-                                        <a class="btn btn-primary" :href="'producto_editar.html?id='+ contacto.id+'&nombre=' +contacto.nombre+ '&direccion='+contacto.direccion+'&telefono='+contacto.telefono +  '&mail='+contacto.mail" >Editar</a>
+                                        <a class="btn btn-primary"
+                                            :href="'producto_editar.html?id='+contacto.id+'&nombre=' +contacto.nombre+ '&direccion='+contacto.direccion+'&telefono='+contacto.telefono +  '&mail='+contacto.email">Editar</a>
                                     </td>
                                 </tr>
                             </tbody>
@@ -87,7 +86,7 @@
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
-    <script src="./js/productos.js"></script>
+    <script src="./js/contactos.js"></script>
 </body>
 
 </html>

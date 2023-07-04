@@ -2,18 +2,19 @@ function guardar() {
     let n = document.getElementById("nombre").value
     let t = parseInt(document.getElementById("telefono").value)
     let d = document.getElementById("direccion").value
-    let m = document.getElementById("mail").value
+    let m = document.getElementById("email").value
 
 
-    let Contacto = {
+    let contacto = {
         nombre: n,
         telefono: t,
         direccion: d,
-        mail: m
+        email: m
     }
+    console.log(contacto)
     let url = "https://andresfrick.pythonanywhere.com/contactos"
     var options = {
-        body: JSON.stringify(Contacto),
+        body: JSON.stringify(contacto),
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
     }

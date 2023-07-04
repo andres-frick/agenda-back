@@ -4,7 +4,7 @@ const { createApp } = Vue
     data() {
       return {
         url:"https://andresfrick.pythonanywhere.com/contactos",//host creado en pythonanywhere para el back
-        productos:[],
+        contactos:[],
         error:false,
         cargando:true
       }
@@ -19,7 +19,7 @@ const { createApp } = Vue
             fetch(url)
                 .then(response => response.json())
                 .then(data => {
-                    this.Contactos = data;
+                    this.contactos = data;
                     this.cargando=false
                 })
                 .catch(err => {
@@ -27,8 +27,8 @@ const { createApp } = Vue
                     this.error=true              
                 })
         },
-        eliminar(Contacto) {
-            const url = 'https://andresfrick.pythonanywhere.com/contactos' + Contacto;
+        eliminar(contacto) {
+            const url = 'https://andresfrick.pythonanywhere.com/contactos/' +contacto;
             var options = {
                 method: 'DELETE',
             }
