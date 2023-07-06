@@ -27,21 +27,26 @@
     </header>
     <main>
         <div id="app" class="container">
-            <br>
-            <h1>Contactos</h1>
-            <a class="btn btn-primary" href="contacto_nuevo.html">Nuevo</a>
-           
-            <section v-if="error">Lo sentimos se produjo un error</section>
-            <section v-else>
-                <section v-if="cargando">
-                    <div class="spinner-grow"></div>
-                    <p>Cargando .....</p>
-
-                </section>
+            <div style="margin: 2.5em 0;">
+                <h1>Contactos</h1>
+            </div>
+            <div style="margin: 2.5em 0;">
+                <a class="btn btn-primary" href="contacto_nuevo.html">Nuevo</a>
+                <section v-if="error">Lo sentimos se produjo un error</section>
                 <section v-else>
+                    <section v-if="cargando">
+                        <div class="spinner-grow"></div>
+                        <p>Cargando .....</p>
 
-                    <div class="table-responsive">
-                        <table class="table table-bordered">
+                    </section>
+                <section v-else>
+            </div>
+            
+           
+            
+
+                    <div class="table-responsive" >
+                        <table class="table table-bordered" style="background:#F0EAD2">
                             <thead>
                                 <tr>
                                     <th scope="col">Id</th>
@@ -60,11 +65,13 @@
                                     <td>{{contacto.telefono}}</td>
                                     <td>{{contacto.email}}</td>
                                     <td>
+                                    
                                         <button type="button" class="btn btn-danger"
-                                            v-on:click="eliminar(contacto.id)">Eliminar</button>
+                                            v-on:click="eliminar(contacto.id)" style="width:5em">Eliminar</button>
 
                                         <a class="btn btn-primary m-2"
-                                            :href="'contacto_editar.html?id='+contacto.id+'&nombre='+contacto.nombre+'&direccion='+contacto.direccion+'&telefono='+contacto.telefono+'&email='+contacto.email">Editar</a>
+                                            :href="'contacto_editar.html?id='+contacto.id+'&nombre='+contacto.nombre+'&direccion='+contacto.direccion+'&telefono='+contacto.telefono+'&email='+contacto.email" style="width:5em">Editar</a>
+
                                     </td>
                                 </tr>
                             </tbody>

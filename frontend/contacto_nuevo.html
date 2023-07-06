@@ -25,33 +25,32 @@
     <!-- place navbar here -->
   </header>
   <main>
-    <div style="background-color: aliceblue;margin:10px auto ; width: 400px; padding: 20px; text-align: center;">
+    <div style="background-color: #F0EAD2; margin: 5em auto; width: 400px; padding: 20px; text-align: center;">
       <form name="form" action="#" method="POST">
         <h1>Alta de Contacto</h1>
-        <div class="mb-3">
-          <label for="nombre">Nombre</label>
-          <input type="text" name="nombre" id="nombre">
-        </div>
-        <div class="mb-3">
-          <label for="direccion">Dirección</label>
-          <input type="text" name="direccion" id="direccion">
-        </div>
-        <div class="mb-3">
-          <label for="telefono">Teléfono</label>
-          <input type="number" name="telefono" id="telefono">
-        </div>
-        <div class="mb-3">
-          <label for="email">Mail</label>
-          <input type="email" name="email" id="email">
+        <div style="text-align: center;">
+          <div class="mb-3">
+            <label for="nombre" style="display: inline-block; width: 100px; text-align: left;">Nombre</label>
+            <input type="text" name="nombre" id="nombre" style="display: inline-block;">
+          </div>
+          <div class="mb-3">
+            <label for="direccion" style="display: inline-block; width: 100px; text-align: left;">Dirección</label>
+            <input type="text" name="direccion" id="direccion" style="display: inline-block;">
+          </div>
+          <div class="mb-3">
+            <label for="telefono" style="display: inline-block; width: 100px; text-align: left;">Teléfono</label>
+            <input type="number" name="telefono" id="telefono" style="display: inline-block;">
+          </div>
+          <div class="mb-3">
+            <label for="email" style="display: inline-block; width: 100px; text-align: left;">Mail</label>
+            <input type="email" name="email" id="email" style="display: inline-block;">
+          </div>
         </div>
       </form>
+
       <button type="button" class="btn btn-success" onclick="validar()">Guardar</button>
       <button type="button" class="btn btn-danger" onclick="volver()">Cancelar</button>
-
-
-
     </div>
-
 
   </main>
   <footer id="footer">
