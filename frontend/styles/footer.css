@@ -1,0 +1,12 @@
+footer {
+    background-color: #A98467;
+    padding: 1em 0;
+    position: relative;
+    width: 100%;
+}
+
+footer .titulo-footer,
+footer .copy {
+    color: aliceblue;
+    text-align: center;
+}

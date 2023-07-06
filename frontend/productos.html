@@ -19,6 +19,7 @@
     </header>
     <main>
         <div id="app" class="container">
+<<<<<<< Updated upstream:frontend/productos.html
             <br>
             <h1>Productos</h1>
             
@@ -35,6 +36,28 @@
                     
                     <div class="table-responsive">
                         <table class="table table-bordered">
+=======
+            <div style="margin: 2.5em 0;">
+                <h1>Contactos</h1>
+            </div>
+            <div style="margin: 2.5em 0;">
+                <a class="btn btn-primary" href="contacto_nuevo.html">Nuevo</a>
+                <section v-if="error">Lo sentimos se produjo un error</section>
+                <section v-else>
+                    <section v-if="cargando">
+                        <div class="spinner-grow"></div>
+                        <p>Cargando .....</p>
+
+                    </section>
+                <section v-else>
+            </div>
+            
+           
+            
+
+                    <div class="table-responsive" >
+                        <table class="table table-bordered" style="background:#F0EAD2">
+>>>>>>> Stashed changes:frontend/contactos.html
                             <thead>
                                 <tr>
                                     <th scope="col">Id</th>
@@ -52,6 +75,7 @@
                                     <td>{{producto.precio}}</td>
                                     <td>{{producto.stock}}</td>
                                     <td>
+<<<<<<< Updated upstream:frontend/productos.html
                                         <img width="60" :src="producto.imagen" :alt="producto.nombre">
 
 
@@ -60,6 +84,13 @@
                                         <button type="button" class="btn btn-danger" v-on:click="eliminar(producto.id)"    >Eliminar</button>
                                         
                                         <a class="btn btn-primary" :href="'producto_editar.html?id='+ producto.id+'&nombre=' +producto.nombre+ '&precio='+producto.precio+'&stock='+producto.stock +  '&imagen='+producto.imagen" >Editar</a>
+=======
+                                        <button type="button" class="btn btn-danger"
+                                            v-on:click="eliminar(contacto.id)" style="width:5em">Eliminar</button>
+
+                                        <a class="btn btn-primary m-2"
+                                            :href="'contacto_editar.html?id='+contacto.id+'&nombre='+contacto.nombre+'&direccion='+contacto.direccion+'&telefono='+contacto.telefono+'&email='+contacto.email" style="width:5em">Editar</a>
+>>>>>>> Stashed changes:frontend/contactos.html
                                     </td>
                                 </tr>
                             </tbody>

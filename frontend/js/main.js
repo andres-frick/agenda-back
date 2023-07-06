@@ -27,4 +27,32 @@ document.getElementById("header").innerHTML=`<nav class="navbar navbar-expand-sm
       </form>
   </div>
 </div>
+<<<<<<< Updated upstream
 </nav>`
+=======
+</nav>`
+var navbarBrand = document.querySelector(".navbar-brand");
+navbarBrand.style.color = "rgb(240,248,255)"; 
+var navLink = document.querySelector(".nav-link");
+navLink.style.color = "rgb(240,248,255)"; 
+
+document.body.style.backgroundColor = "#DDE5B6";
+
+
+document.getElementById("footer").innerHTML=`
+<div class="copy">
+    <small>&copy; 2023 - <b>Codo a Codo - Comision 23033</b> - Todos los Derechos Reservados.</small>
+</div>`
+var footer = document.getElementById("footer");
+footer.style.position = "fixed";
+footer.style.bottom = "0";
+footer.style.width = "100%";
+footer.style.backgroundColor = "#A98467";
+footer.style.padding = "10px 0";
+footer.style.textAlign = "center";
+
+
+function volver(){
+    window.location.href = "./contactos.html";
+}
+>>>>>>> Stashed changes
