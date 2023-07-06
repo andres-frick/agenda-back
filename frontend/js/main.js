@@ -1,35 +1,14 @@
-document.getElementById("header").innerHTML=`<nav class="navbar navbar-expand-sm navbar-light bg-light">
+document.getElementById("header").innerHTML=`<nav class="navbar navbar-expand-sm">
 <div class="container">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="/frontend/">Agenda</a>
   <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
       aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="collapsibleNavId">
-      <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-          <li class="nav-item">
-              <a class="nav-link active" href="#" aria-current="page">Home <span class="visually-hidden">(current)</span></a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-          </li>f
-          <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CRUD</a>
-              <div class="dropdown-menu" aria-labelledby="dropdownId">
-                  <a class="dropdown-item" href="productos.html">Productos</a>
-                  <a class="dropdown-item" href="#">Action 2</a>
-              </div>
-          </li>
-      </ul>
-      <form class="d-flex my-2 my-lg-0">
-          <input class="form-control me-sm-2" type="text" placeholder="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-  </div>
+    <form class="d-flex my-2 my-lg-0">
+        <a class="nav-link" href="contactos.html">Contactos</a>
+    </form>
 </div>
-<<<<<<< Updated upstream
-</nav>`
-=======
 </nav>`
 var navbarBrand = document.querySelector(".navbar-brand");
 navbarBrand.style.color = "rgb(240,248,255)"; 
@@ -39,10 +18,13 @@ navLink.style.color = "rgb(240,248,255)";
 document.body.style.backgroundColor = "#DDE5B6";
 
 
+
+
 document.getElementById("footer").innerHTML=`
 <div class="copy">
     <small>&copy; 2023 - <b>Codo a Codo - Comision 23033</b> - Todos los Derechos Reservados.</small>
 </div>`
+
 var footer = document.getElementById("footer");
 footer.style.position = "fixed";
 footer.style.bottom = "0";
@@ -51,8 +33,7 @@ footer.style.backgroundColor = "#A98467";
 footer.style.padding = "10px 0";
 footer.style.textAlign = "center";
 
-
 function volver(){
     window.location.href = "./contactos.html";
 }
->>>>>>> Stashed changes
+

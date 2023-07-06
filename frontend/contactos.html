@@ -2,10 +2,18 @@
 <html lang="en">
 
 <head>
-    <title>Title</title>
+    <title>Agenda</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="img/cuaderno.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/nav.css">
+
+    <!-- Sweet Alert 2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.12/dist/sweetalert2.all.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.12/dist/sweetalert2.min.css" rel="stylesheet">
 
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -19,24 +27,6 @@
     </header>
     <main>
         <div id="app" class="container">
-<<<<<<< Updated upstream:frontend/productos.html
-            <br>
-            <h1>Productos</h1>
-            
-            <a class="btn btn-primary" href="producto_nuevo.html">Nuevo</a>
-
-            <section v-if="error">Lo sentimos se produjo un error</section>
-            <section v-else>
-                <section v-if="cargando">
-                    <div class="spinner-border"></div>
-                    <p>Cargando .....</p>
-
-                </section>
-                <section v-else>
-                    
-                    <div class="table-responsive">
-                        <table class="table table-bordered">
-=======
             <div style="margin: 2.5em 0;">
                 <h1>Contactos</h1>
             </div>
@@ -57,40 +47,31 @@
 
                     <div class="table-responsive" >
                         <table class="table table-bordered" style="background:#F0EAD2">
->>>>>>> Stashed changes:frontend/contactos.html
                             <thead>
                                 <tr>
                                     <th scope="col">Id</th>
                                     <th scope="col">Nombre</th>
-                                    <th scope="col">Precio</th>
-                                    <th scope="col">Stock</th>
-                                    <th scope="col">Imagen</th>
+                                    <th scope="col">Dirección</th>
+                                    <th scope="col">Teléfono</th>
+                                    <th scope="col">Email</th>
                                     <th scope="col">Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr v-for="producto in productos" class="">
-                                    <td scope="row">{{producto.id}}</td>
-                                    <td>{{producto.nombre}}</td>
-                                    <td>{{producto.precio}}</td>
-                                    <td>{{producto.stock}}</td>
+                                <tr v-for="contacto in contactos" class="">
+                                    <td scope="row">{{contacto.id}}</td>
+                                    <td>{{contacto.nombre}}</td>
+                                    <td>{{contacto.direccion}}</td>
+                                    <td>{{contacto.telefono}}</td>
+                                    <td>{{contacto.email}}</td>
                                     <td>
-<<<<<<< Updated upstream:frontend/productos.html
-                                        <img width="60" :src="producto.imagen" :alt="producto.nombre">
-
-
-                                    </td>
-                                    <td>
-                                        <button type="button" class="btn btn-danger" v-on:click="eliminar(producto.id)"    >Eliminar</button>
-                                        
-                                        <a class="btn btn-primary" :href="'producto_editar.html?id='+ producto.id+'&nombre=' +producto.nombre+ '&precio='+producto.precio+'&stock='+producto.stock +  '&imagen='+producto.imagen" >Editar</a>
-=======
+                                    
                                         <button type="button" class="btn btn-danger"
                                             v-on:click="eliminar(contacto.id)" style="width:5em">Eliminar</button>
 
                                         <a class="btn btn-primary m-2"
                                             :href="'contacto_editar.html?id='+contacto.id+'&nombre='+contacto.nombre+'&direccion='+contacto.direccion+'&telefono='+contacto.telefono+'&email='+contacto.email" style="width:5em">Editar</a>
->>>>>>> Stashed changes:frontend/contactos.html
+
                                     </td>
                                 </tr>
                             </tbody>
@@ -102,7 +83,7 @@
         </div>
 
     </main>
-    <footer>
+    <footer id="footer">
         <!-- place footer here -->
     </footer>
     <!-- Bootstrap JavaScript Libraries -->
@@ -111,13 +92,13 @@
         </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
-        </script>
-    <script src="./js/main.js"></script>
-
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
-    <script src="./js/productos.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/contactos.js"></script>
+
 </body>
 
 </html>

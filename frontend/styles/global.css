@@ -31,16 +31,16 @@ body {
 }
 
 .color-acento {
-    color: #6a48c7;
+    color: #502bb6;
     font-size: 1.5em;
 }
 
 .invalid{
-    border: 1px solid rgb(237, 83, 83);
-    box-shadow: 00 0 10px rgb(175, 38, 38);
+    border: 1px solid red;
+    box-shadow: 00 0 10px red;
 }
 .error {
-    color: rgb(208, 48, 48);
+    color: red;
     font-size: 1em;
     display: block;
 }

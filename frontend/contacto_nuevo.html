@@ -2,15 +2,22 @@
 <html lang="en">
 
 <head>
-  <title>Title</title>
+  <title>Agenda</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="img/cuaderno.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="./styles/footer.css">
+  <link rel="stylesheet" href="./styles/nav.css">
+
+  <!-- Sweet Alert 2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.12/dist/sweetalert2.all.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.12/dist/sweetalert2.min.css" rel="stylesheet">
 
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-
 </head>
 
 <body>
@@ -18,26 +25,6 @@
     <!-- place navbar here -->
   </header>
   <main>
-<<<<<<< Updated upstream:frontend/producto_nuevo.html
-    <div class="container">
-      <form  style="background-color: aliceblue;margin:10px auto ; width: 400px; padding: 20px;">
-        <h1>Alta de Producto</h1>
-        <div class="mb-3">
-          <label for="nombre">Nombre</label>
-          <input type="text" name="nombre" id="nombre">
-        </div>
-        <div class="mb-3">
-          <label for="precio">Precio</label>
-          <input type="number" name="precio" id="precio">
-        </div>
-        <div class="mb-3">
-          <label for="stock">Stock</label>
-          <input type="number" name="stock" id="stock">
-        </div>
-        <div class="mb-3">
-          <label for="imagen">Imagen</label>
-          <input type="text" name="imagen" id="imagen">
-=======
     <div style="background-color: #F0EAD2; margin: 5em auto; width: 400px; padding: 20px; text-align: center;">
       <form name="form" action="#" method="POST">
         <h1>Alta de Contacto</h1>
@@ -58,40 +45,31 @@
             <label for="email" style="display: inline-block; width: 100px; text-align: left;">Mail</label>
             <input type="email" name="email" id="email" style="display: inline-block;">
           </div>
->>>>>>> Stashed changes:frontend/contacto_nuevo.html
         </div>
-       
-          <button type="button" class="btn btn-success" onclick="guardar()">Grabar</button>
       </form>
-<<<<<<< Updated upstream:frontend/producto_nuevo.html
 
-
-=======
       <button type="button" class="btn btn-success" onclick="validar()">Guardar</button>
       <button type="button" class="btn btn-danger" onclick="volver()">Cancelar</button>
     </div>
-    
->>>>>>> Stashed changes:frontend/contacto_nuevo.html
-    </div>
-
 
   </main>
-  <footer>
+  <footer id="footer">
     <!-- place footer here -->
   </footer>
+  
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-  </script>
+    </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
 
-  </script>
+    </script>
+
   <script src="./js/main.js"></script>
-  <script src="./js/producto_nuevo.js"></script>
-
-
+  <script src="./js/contacto_nuevo.js"></script>
+  <script src="./js/form_validator.js"></script>
 
 </body>
 
