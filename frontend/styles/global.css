@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+    padding-bottom: 10px;
+}
+
+p {
+    padding-bottom: 20px;
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    position: absolute;
+    background-color: rgb(238, 231, 222);
+
+}
+
+.color-acento {
+    color: #502bb6;
+    font-size: 1.5em;
+}
+
+.invalid{
+    border: 1px solid red;
+    box-shadow: 00 0 10px red;
+}
+.error {
+    color: red;
+    font-size: 1em;
+    display: block;
+}

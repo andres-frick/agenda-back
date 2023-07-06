@@ -11,22 +11,33 @@ function guardar() {
         direccion: d,
         email: m
     }
-    console.log(contacto)
+
     let url = "https://andresfrick.pythonanywhere.com/contactos"
     var options = {
         body: JSON.stringify(contacto),
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
     }
+
     fetch(url, options)
         .then(function () {
-            console.log("creado")
-            alert("Contacto Agregado")  
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Contacto creado correctamente',
+                showConfirmButton: false,
+                timer: 1500
+            }).then(function () {
+                window.location.href = "./contactos.html";
+            })
+
         })
         .catch(err => {
-            //this.errored = true
-            alert("Error al guardar" )
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Algo salio mal!',
+            })
             console.error(err);
         })
 }
-
