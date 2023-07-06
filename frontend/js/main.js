@@ -8,7 +8,7 @@ document.getElementById("header").innerHTML=`<nav class="navbar navbar-expand-sm
   <div class="collapse navbar-collapse" id="collapsibleNavId">
       <ul class="navbar-nav me-auto mt-2 mt-lg-0">
           <li class="nav-item">
-              <a class="nav-link" href="productos.html">Contactos</a>
+              <a class="nav-link" href="contactos.html">Contactos</a>
           </li>         
       </ul>
       <form class="d-flex my-2 my-lg-0">

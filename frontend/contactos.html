@@ -23,15 +23,15 @@
             <br>
             <h1>Contactos</h1>
             
-            <a class="btn btn-primary" href="producto_nuevo.html">Nuevo</a>
+            <a class="btn btn-primary" href="contacto_nuevo.html">Nuevo</a>
 
-            <!-- <section v-if="error">Lo sentimos se produjo un error</section> -->
+            <section v-if="error">Lo sentimos se produjo un error</section>
             <section v-else>
-                <!-- <section v-if="cargando">
+                <section v-if="cargando">
                     <div class="spinner-grow"></div>
                     <p>Cargando .....</p>
 
-                </section> -->
+                </section>
                 <section v-else>
                     
                     <div class="table-responsive">
@@ -60,7 +60,7 @@
                                     <td>
                                         <button type="button" class="btn btn-danger" v-on:click="eliminar(contacto.id)"    >Eliminar</button>
                                         
-                                        <a class="btn btn-primary" :href="'producto_editar.html?id='+ contacto.id+'&nombre=' +contacto.nombre+ '&direccion='+contacto.direccion+'&telefono='+contacto.telefono +  '&mail='+contacto.mail" >Editar</a>
+                                        <a class="btn btn-primary" :href="'contacto_editar.html?id='+ contacto.id+'&nombre=' +contacto.nombre+ '&direccion='+contacto.direccion+'&telefono='+contacto.telefono +  '&mail='+contacto.mail" >Editar</a>
                                     </td>
                                 </tr>
                             </tbody>
