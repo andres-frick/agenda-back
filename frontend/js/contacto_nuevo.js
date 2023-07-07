@@ -22,7 +22,7 @@ function guardar() {
     fetch(url, options)
         .then(function () {
             Swal.fire({
-                position: 'top-end',
+                position: 'top-center',
                 icon: 'success',
                 title: 'Contacto creado correctamente',
                 showConfirmButton: false,
